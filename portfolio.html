@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE PORTFOLIO | VIVAHALUXE CINEMATICS | Luxury Wedding Galleries Mumbai</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="bg-velvet-black text-white antialiased min-h-screen selection:bg-rose-gold/30 selection:text-rose-gold">
+    <div class="app-frame flex flex-col min-h-screen relative">
+      <!-- Sophisticated Dark glowing core accent line -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#e0a96d] to-transparent opacity-50 z-50"></div>
+
+      <!-- FIXED BLUR NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 px-6 md:px-12 bg-velvet-black/70 backdrop-blur-[20px] border-b border-rose-gold/10">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="./index.html" class="flex flex-col group">
+          <span class="font-serif text-lg md:text-2xl font-bold tracking-[0.18em] text-white group-hover:text-rose-gold transition-colors duration-300">
+            VIVAHALUXE
+          </span>
+          <span class="font-sans text-[8px] md:text-[10px] tracking-[0.4em] text-rose-gold font-semibold uppercase">
+            C I N E M A T I C S
+          </span>
+        </a>
+
+        <!-- Center Menu Links -->
+        <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest font-semibold uppercase">
+          <a href="./index.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">HOME</a>
+          <a href="./portfolio.html" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">PORTFOLIO</a>
+          <a href="./about.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">THE MASTERS</a>
+          <a href="./contact.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">CONTACT</a>
+        </div>
+
+        <!-- Right Side Controls (Mobile Menu Button & CTA Combo) -->
+        <div class="flex items-center gap-4">
+          <!-- Right Action Button -->
+          <div class="hidden md:block">
+            <a href="./contact.html" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+              <span class="relative z-10 flex items-center gap-2">
+                Check Availability
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-ping"></span>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle Trigger -->
+          <button id="mobile-menu-btn" class="relative z-50 w-10 h-10 flex md:hidden items-center justify-center text-white hover:text-rose-gold transition-colors duration-300 focus:outline-none bg-white/[0.03] hover:bg-white/[0.08] rounded-full border border-white/[0.08]" aria-label="Toggle Menu">
+            <span class="sr-only">Toggle Menu</span>
+            <div class="relative w-5 h-4 flex flex-col justify-between">
+              <span id="menu-line-1" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+              <span id="menu-line-2" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+              <span id="menu-line-3" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-velvet-black/98 backdrop-blur-2xl transition-all duration-500 opacity-0 pointer-events-none flex flex-col justify-center items-center px-12 text-center">
+      <!-- Intricate floating mandala wireframe background decoration -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+        <svg class="w-[500px] h-[500px] text-rose-gold animate-spin-slow" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.3" stroke-dasharray="2 2" />
+          <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="0.3" />
+          <path d="M50 5 L50 95 M5 50 L95 50" stroke="currentColor" stroke-width="0.25" />
+          <rect x="35" y="35" width="30" height="30" rx="4" stroke="currentColor" stroke-width="0.3" transform="rotate(45 50 50)" />
+        </svg>
+      </div>
+
+      <!-- Links menu container -->
+      <div class="space-y-10 relative z-10 w-full max-w-sm">
+        <div class="flex flex-col items-center mb-6">
+          <span class="font-serif text-3xl font-bold tracking-[0.25em] text-white">VIVAHALUXE</span>
+          <span class="font-sans text-[9px] tracking-[0.45em] text-rose-gold font-bold uppercase mt-1.5">C I N E M A T I C S</span>
+        </div>
+        
+        <div class="flex flex-col space-y-5 text-sm tracking-[0.25em] font-sans font-semibold uppercase">
+          <a href="./index.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
+          <a href="./portfolio.html" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
+          <a href="./about.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
+          <a href="./contact.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
+        </div>
+
+        <div class="pt-6">
+          <a href="./contact.html" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Book Consultation
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-pulse"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOATING MANDAP AS ENTRY ANCHOR LAYER -->
+    <div class="absolute top-[88px] left-1/2 -translate-x-1/2 z-10 pointer-events-none mb-12">
+      <svg class="w-16 h-16 md:w-20 md:h-20 text-rose-gold/40 luxury-floating-ornament" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.75" />
+        <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1" />
+        <path d="M50 5 L50 95 M5 50 L95 50 M18.5 18.5 L81.5 81.5 M18.5 81.5 L81.5 18.5" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.5" />
+        <rect x="35" y="35" width="30" height="30" rx="4" stroke="currentColor" stroke-width="0.75" transform="rotate(45 50 50)" />
+        <circle cx="50" cy="50" r="5" fill="currentColor" fill-opacity="0.8" />
+        <path d="M50 15 C45 30 35 35 50 50 C65 35 55 30 50 15 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M50 85 C45 70 35 65 50 50 C65 65 55 70 50 85 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M15 50 C30 45 35 35 50 50 C35 65 30 55 15 50 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M85 50 C70 45 65 35 50 50 C65 65 70 55 85 50 Z" stroke="currentColor" stroke-width="0.75" />
+      </svg>
+    </div>
+
+    <!-- PORTFOLIO HEADER -->
+    <header class="relative pt-36 pb-12 md:pt-48 md:pb-20 px-6 text-center bg-gradient-to-b from-charcoal-gold via-velvet-black to-velvet-black border-b border-white/[0.03]">
+      <div class="max-w-4xl mx-auto space-y-4 md:space-y-6 z-10">
+        <span class="inline-block px-3 py-1 border border-rose-gold/20 bg-rose-gold/5 rounded-full text-[9px] md:text-xs tracking-[0.3em] uppercase text-rose-gold font-mono-accent">
+          THE ANTHOLOGY
+        </span>
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white leading-tight">
+          Frozen Eras & Editorial Frames
+        </h1>
+        <p class="max-w-xl mx-auto text-xs md:text-sm text-white/60 font-light leading-relaxed font-sans">
+          A meticulously curated layout of our finest multi-cultural Indian wedding documentation. Engineered using an asymmetric masonry-inspired grid framework where varying aspect ratios create a visual rhythm.
+        </p>
+      </div>
+    </header>
+
+    <!-- ASYMMETRIC CONTROLS / FILTER BAR -->
+    <section class="py-8 px-6">
+      <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto text-2xs md:text-xs font-mono font-semibold uppercase tracking-widest">
+        <button data-filter="all" class="portfolio-filter-btn px-5 py-2.5 border border-rose-gold text-rose-gold bg-rose-gold/10 rounded-full transition-all duration-300">Show All</button>
+        <button data-filter="muhurtham" class="portfolio-filter-btn px-5 py-2.5 border border-white/10 text-white/60 rounded-full hover:border-rose-gold/50 hover:text-rose-gold transition-all duration-300">Muhurtham</button>
+        <button data-filter="sangeet" class="portfolio-filter-btn px-5 py-2.5 border border-white/10 text-white/60 rounded-full hover:border-rose-gold/50 hover:text-rose-gold transition-all duration-300">Sangeet Motion</button>
+        <button data-filter="bridal" class="portfolio-filter-btn px-5 py-2.5 border border-white/10 text-white/60 rounded-full hover:border-rose-gold/50 hover:text-rose-gold transition-all duration-300">Bridal Solos</button>
+        <button data-filter="pheras" class="portfolio-filter-btn px-5 py-2.5 border border-white/10 text-white/60 rounded-full hover:border-rose-gold/50 hover:text-rose-gold transition-all duration-300">Twilight Pheras</button>
+      </div>
+    </section>
+
+    <!-- THE ASYMMETRIC GALLERY GRID -->
+    <main class="py-12 px-6 md:px-12 max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 md:gap-8 lg:gap-12 items-stretch" id="portfolioGrid">
+        
+        <!-- Image 1 -->
+        <article data-category="bridal" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/19376431/pexels-photo-19376431.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Vertical Vogue Portrait - Bridal Lehnga Detail" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 01 &mdash; Bridal Lehnga Detail</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Vogue Bridal Couture</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Delicate, hand-woven luxury silk weaves under subtle key lighting.</p>
+          </div>
+        </article>
+
+        <!-- Image 2 -->
+        <article data-category="muhurtham" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[3/2] shadow-xl">
+            <img src="https://images.pexels.com/photos/18897125/pexels-photo-18897125.jpeg?auto=format&fit=crop&q=80&w=900&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Horizontal Cinematic Wide - Royal Mandap Entrance" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 02 &mdash; Royal Mandap Entrance</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Royal Mandap Architecture</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">A grand entry alignment framed by heritage archways and gold floral structures.</p>
+          </div>
+        </article>
+
+        <!-- Image 3 -->
+        <article data-category="muhurtham" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/1182963/pexels-photo-1182963.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Square Candid - The Groomsmen Laughter" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 03 &mdash; The Groomsmen Laughter</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Shared Rejoice</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Organic camaraderie and laughter frozen beautifully in authentic luxury monochrome profiles.</p>
+          </div>
+        </article>
+
+        <!-- Image 4 -->
+        <article data-category="bridal" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/34479807/pexels-photo-34479807.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Vertical Editorial - Royal Groom Sherwani Profile" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 04 &mdash; Royal Groom Sherwani Profile</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Sartorial Groom Profile</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Fine details of royal gold-embroidered Sherwani and hand-cut jewelry.</p>
+          </div>
+        </article>
+
+        <!-- Image 5 -->
+        <article data-category="pheras" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/9] shadow-xl">
+            <img src="https://images.pexels.com/photos/35457633/pexels-photo-35457633.jpeg?auto=format&fit=crop&q=80&w=900&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Widescreen Landscape - Twilight Pheras Silhouette" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 05 &mdash; Twilight Pheras Silhouette</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">The Twilight Silhouette</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Holy vows traced against rising flame sparks and the spectacular fading violet sunset.</p>
+          </div>
+        </article>
+
+        <!-- Image 6 -->
+        <article data-category="bridal" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/7153785/pexels-photo-7153785.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Square Detail - Mehendi Hand Patterns" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 06 &mdash; Mehendi Hand Patterns</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Intricate Crimson Weaves</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Chiaroscuro detail shot highlighting intricate ancestral Mehendi designs on hands.</p>
+          </div>
+        </article>
+
+        <!-- Image 7 -->
+        <article data-category="pheras" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/18361996/pexels-photo-18361996.jpegauto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Vertical Portrait - Emotional Vidaai Tear" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 07 &mdash; Emotional Vidaai Tear</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">The Vidaai Chapters</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">A powerful, raw emotional candid catch documenting family departure tears.</p>
+          </div>
+        </article>
+
+        <!-- Image 8 -->
+        <article data-category="sangeet" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/10] shadow-xl">
+            <img src="https://images.pexels.com/photos/13273850/pexels-photo-13273850.jpeg?auto=format&fit=crop&q=80&w=800&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Horizontal Shot - The High-Motion Sangeet Dance" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 08 &mdash; The High-Motion Sangeet Dance</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Sangeet Stage Explosion</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Capturing continuous motion, laser bursts, and spectacular crowd festive rhythm.</p>
+          </div>
+        </article>
+
+        <!-- Image 9 -->
+        <article data-category="muhurtham" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/19376431/pexels-photo-19376431.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Square Frame - Sacred Fire & Mangalsutra Ritual" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 09 &mdash; Sacred Fire & Mangalsutra Ritual</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Vows of Golden Thread</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Macro close-up detailing the sacred tying of Mangalsutra before the holy fire.</p>
+          </div>
+        </article>
+
+        <!-- Image 10 -->
+        <article data-category="bridal" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/17262009/pexels-photo-17262009.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Vertical Portrait - Cinematic Veil Flow in Moonlight" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 10 &mdash; Cinematic Veil Flow in Moonlight</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Moonlight Veil Flow</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">An elegant, slow-shutter flow of the lightweight silk veil under moonlit skies.</p>
+          </div>
+        </article>
+
+        <!-- Image 11 -->
+        <article data-category="sangeet" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/9] shadow-xl">
+            <img src="https://images.pexels.com/photos/19594072/pexels-photo-19594072.jpeg?auto=format&fit=crop&q=80&w=900&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Horizontal Wide - Pre-Wedding Sunset at Alibaug Coast" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 11 &mdash; Pre-Wedding Sunset at Alibaug Coast</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Alibaug Coast Horizon</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">An intimate beachfront wide horizon capture tracing cinematic couple walks.</p>
+          </div>
+        </article>
+
+        <!-- Image 12 -->
+        <article data-category="muhurtham" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/25489380/pexels-photo-25489380.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Palace Architectural Haldi Splash" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 12 &mdash; Palace Architectural Haldi Splash</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Heritage Haldi Splash</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">High-shutter dynamic splash of yellow water droplets during the Haldi laughters.</p>
+          </div>
+        </article>
+
+        <!-- Image 13 -->
+        <article data-category="bridal" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/27876529/pexels-photo-27876529.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Royal Jewelry Close-up Focus" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 13 &mdash; Royal Jewelry Close-up Focus</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Opulent Stone Details</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Crisp, hyper-focused photography of Kundan pearls and classic heirloom stones.</p>
+          </div>
+        </article>
+
+        <!-- Image 14 -->
+        <article data-category="sangeet" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/9] shadow-xl">
+            <img src="https://images.pexels.com/photos/33885293/pexels-photo-33885293.jpeg?auto=format&fit=crop&q=80&w=900&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Horizontal Wide - Baraat Procession Sparklers entry" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 14 &mdash; Baraat Procession Sparklers entry</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">The Sparkler Baraat</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">A high-contrast sparkler display framing the groom's heritage arrival.</p>
+          </div>
+        </article>
+
+        <!-- Image 15 -->
+        <article data-category="muhurtham" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/27286970/pexels-photo-27286970.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Bride Sharing a Smile with Mother" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 15 &mdash; Bride Sharing a Smile with Mother</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Generational Warmth</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">A soft candid moment captured during final makeup adjustments with mother.</p>
+          </div>
+        </article>
+
+        <!-- Image 16 -->
+        <article data-category="pheras" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/16314538/pexels-photo-16314538.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="Fine Art Couple Silhouette against Archway" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 16 &mdash; Fine Art Couple Silhouette against Archway</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Mughal Archway Gaze</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Geometric structural framing aligning the couple within historic palace arches.</p>
+          </div>
+        </article>
+
+        <!-- Image 17 -->
+        <article data-category="sangeet" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/9] shadow-xl">
+            <img src="https://images.pexels.com/photos/27824402/pexels-photo-27824402.jpeg?auto=format&fit=crop&q=80&w=900&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Post-Wedding Luxury Reception Stage" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 17 &mdash; Post-Wedding Luxury Reception Stage</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">The Grand Reception Hall</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Panoramic captures of premium cascading chandeliers and golden stage tables.</p>
+          </div>
+        </article>
+
+        <!-- Image 18 -->
+        <article data-category="sangeet" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-square shadow-xl">
+            <img src="https://images.pexels.com/photos/10440233/pexels-photo-10440233.jpeg?auto=format&fit=crop&q=80&w=600&h=600" 
+                 referrerpolicy="no-referrer"
+                 alt="Detailed Floral Jaimala Exchange" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 18 &mdash; Detailed Floral Jaimala Exchange</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Jaimala Exchange</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">An intimate high-shutter freeze of marigold petals flying as collars meet.</p>
+          </div>
+        </article>
+
+        <!-- Image 19 -->
+        <article data-category="pheras" class="portfolio-card col-span-1 lg:col-span-4 space-y-4 group reveal-item" data-reveal="left">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[2/3] shadow-xl">
+            <img src="https://images.pexels.com/photos/20518451/pexels-photo-20518451.jpeg?auto=format&fit=crop&q=80&w=600&h=900" 
+                 referrerpolicy="no-referrer"
+                 alt="High-Fashion Intimate Couple Gaze" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 19 &mdash; High-Fashion Intimate Couple Gaze</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Editorial Couple Portrait</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">High-fashion intimate gazes styled for luxury print wedding features.</p>
+          </div>
+        </article>
+
+        <!-- Image 20 -->
+        <article data-category="pheras" class="portfolio-card col-span-2 lg:col-span-8 space-y-4 group reveal-item" data-reveal="right">
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.04] bg-charcoal-gold aspect-[16/9] shadow-xl">
+            <img src="https://images.pexels.com/photos/17657612/pexels-photo-17657612.jpeg?auto=format&fit=crop&q=80&w=900&h=500" 
+                 referrerpolicy="no-referrer"
+                 alt="Dramatic Lens Flare During Pheras" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-velvet-black/90 via-transparent to-transparent opacity-85"></div>
+            <div class="absolute top-4 left-4 w-6 h-6 border-t border-l border-rose-gold/40"></div>
+            <div class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-rose-gold/40"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-rose-gold font-bold">Chapter 20 &mdash; Dramatic Lens Flare During Pheras</span>
+            </div>
+          </div>
+          <div class="space-y-2 px-2 hidden lg:block">
+            <h3 class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-rose-gold transition-colors">Ethereal Phera Flares</h3>
+            <p class="text-xs text-white/60 font-light leading-relaxed">Capturing warm cinematic light flares through hand-cut vintage lenses during pheras.</p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- MASTER LOWER SECTION: THE ETERNAL CINEMATIC CAROUSEL -->
+    <section class="py-20 border-t border-white/[0.03] overflow-hidden bg-gradient-to-b from-velvet-black to-[#09090b] relative">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-rose-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 text-center space-y-4 mb-16 relative z-10">
+        <span class="inline-block px-3 py-1 border border-rose-gold/20 bg-rose-gold/5 rounded-full text-[9px] md:text-sm tracking-[0.3em] uppercase text-rose-gold font-mono">
+          CONTINUOUS MOTION
+        </span>
+        <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white">
+          The Infinite Frame Reel
+        </h2>
+        <p class="max-w-xl mx-auto text-xs md:text-sm text-white/60 font-light leading-relaxed font-sans">
+          A non-stop, mechanical panorama capturing the high-energy tempos of Indian festivities.
+        </p>
+      </div>
+
+      <!-- Marquee Carousel System -->
+      <div class="marquee-container relative w-full overflow-hidden py-4 cursor-pointer">
+        <!-- Floating overlay gradients for premium fade look -->
+        <div class="absolute inset-y-0 left-0 w-16 md:w-36 bg-gradient-to-r from-velvet-black to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-16 md:w-36 bg-gradient-to-l from-[#09090b] to-transparent z-20 pointer-events-none"></div>
+
+        <div class="marquee-track flex animate-marquee gap-6 whitespace-nowrap">
+          <!-- 10 images doubled for seamless infinite looping -->
+          <div class="flex gap-6 shrink-0">
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.pexels.com/photos/13273850/pexels-photo-13273850.jpeg?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 01" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_01 / BEATS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.pexels.com/photos/16314538/pexels-photo-16314538.jpeg?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 02" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_02 / LIGHTS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.pexels.com/photos/10440233/pexels-photo-10440233.jpeg?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 03" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_03 / BLISS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.pexels.com/photos/16314538/pexels-photo-16314538.jpeg?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 04" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_04 / GLAMOUR</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.pexels.com/photos/19376431/pexels-photo-19376431.jpeg?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 05" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_05 / HARMONY</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 06" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_06 / FESTIVAL</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 07" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_07 / FEAST</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 08" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_08 / CRUISE</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 09" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_09 / ENERGY</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_10 / CELEBRATION</span>
+            </div>
+          </div>
+          <!-- Second half copies -->
+          <div class="flex gap-6 shrink-0">
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 01 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_01 / BEATS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 02 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_02 / LIGHTS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1504196606672-aef340cecd43?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 03 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_03 / BLISS</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1481162854517-d9e353af153d?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 04 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_04 / GLAMOUR</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 05 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_05 / HARMONY</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 06 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_06 / FESTIVAL</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 07 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_07 / FEAST</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 08 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_08 / CRUISE</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 09 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_09 / ENERGY</span>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[180px] md:h-[250px] shrink-0 overflow-hidden rounded-2xl border border-white/[0.05] relative group shadow-xl">
+              <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80&w=400&h=250" referrerpolicy="no-referrer" alt="Infinite Frame 10 (dup)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-4 left-4 font-mono text-[9px] text-white/50 tracking-wider">FRAME_10 / CELEBRATION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERSAL ULTRA-ATTRACTIVE FOOTER -->
+    <footer class="bg-charcoal-gold border-t border-rose-gold/10 pt-20 pb-8 px-6 md:px-12 relative overflow-hidden">
+      <!-- Back Drop Giant Brand Signature -->
+      <div class="absolute -bottom-10 right-0 left-0 hidden lg:block select-none pointer-events-none text-center">
+        <span class="font-serif text-[13.5rem] font-bold text-white/[0.015] tracking-[0.16em] uppercase block leading-none">
+          VIVAHALUXE
+        </span>
+      </div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-16 border-b border-white/[0.04] relative z-10">
+        <!-- Col 1: Studio Signature Block -->
+        <div class="md:col-span-4 space-y-6">
+          <div class="flex flex-col">
+            <span class="font-serif text-xl font-bold tracking-[0.18em] text-white">VIVAHALUXE</span>
+            <span class="font-sans text-[8px] tracking-[0.4em] text-rose-gold font-bold uppercase">C I N E M A T I C S</span>
+          </div>
+          <p class="text-xs md:text-sm text-white/50 leading-relaxed font-light">
+            Luxury wedding photography and high-fashion cinematic portfolios based in Mumbai, capturing heritage unions across Udaipur, Goa, Alibaug, and globe-wide destinations.
+          </p>
+          <!-- Social Badges -->
+          <div class="flex items-center space-x-4 text-white/40 hover:text-rose-gold text-xs font-mono">
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">INSTAGRAM</span>
+            <span class="text-white/20">|</span>
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">VIMEO</span>
+            <span class="text-white/20">|</span>
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">PINTEREST</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Core Directories</h4>
+          <ul class="space-y-2.5 text-xs text-white/50 tracking-wider">
+            <li><a href="./index.html" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
+            <li><a href="./portfolio.html" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
+            <li><a href="./about.html" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
+            <li><a href="./contact.html" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Metrics -->
+        <div class="md:col-span-5 space-y-6">
+          <div class="space-y-4">
+            <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Studio Metrics</h4>
+            <div class="space-y-2 text-xs text-white/60 font-sans leading-relaxed">
+              <p>
+                <strong class="text-rose-gold font-serif">MUMBAI HQ:</strong><br>
+                Vivahaluxe Studios, Level 5, The Capital Building, G-Block, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051.
+              </p>
+              <p>
+                <strong class="text-rose-gold font-serif">EMAIL INTEG:</strong> <br>
+                studios@vivahaluxe.com / consultations@vivahaluxe.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Newsletter Subscription -->
+          <div class="space-y-3">
+            <span class="text-2xs font-mono text-white/40 uppercase tracking-widest block font-bold">JOIN THE INNER CIRCLE</span>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-2">
+              <input type="email" required placeholder="Enter your email" class="flex-1 px-4 py-2 bg-velvet-black border border-white/10 rounded-lg text-xs tracking-wider text-white focus:outline-none focus:border-rose-gold transition-colors">
+              <button type="submit" class="btn-glow px-5 py-2 bg-rose-gold text-velvet-black text-2xs tracking-widest font-bold uppercase rounded-lg">
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal footer lines -->
+      <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row items-center justify-between text-[10px] font-mono text-white/35 gap-4 relative z-10">
+        <div>
+          &copy; 2026 VIVAHALUXE CINEMATICS. ALL REGISTRY RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>DESIGNED FOR VOGUE WEDDINGS</span>
+          <span>|</span>
+          <span>CURATED IN MUMBAI</span>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

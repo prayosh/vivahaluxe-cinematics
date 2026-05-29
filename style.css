@@ -1,0 +1,357 @@
+/* Custom scrollbar and theme defaults... */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", sans-serif;
+  --color-velvet-black: #0c0c0e;
+  --color-charcoal-gold: #131316;
+  --color-rose-gold: #e0a96d;
+}
+
+/* Base custom definitions alignment */
+html, body {
+  background-color: #0c0c0e;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Luxury Global Border framing for high-end look */
+.app-frame {
+  border: 12px solid #131316;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Glass styling from Sophisticated Dark spec */
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(12, 12, 14, 0.7);
+  border-bottom: 1px solid rgba(224, 169, 109, 0.2);
+}
+
+/* Sophisticated Dark gradient pattern */
+.hero-gradient {
+  background: linear-gradient(90deg, #0c0c0e 40%, transparent 100%);
+}
+
+.rose-border {
+  border: 1px solid rgba(224, 169, 109, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0c0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0a96d33;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e0a96d66;
+}
+
+/* Luxury float keyframes for Mandap decorative element */
+@keyframes luxuryFloat {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 5px rgba(224, 169, 109, 0.1));
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg) scale(1.03);
+    filter: drop-shadow(0 0 15px rgba(224, 169, 109, 0.3));
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 5px rgba(224, 169, 109, 0.1));
+  }
+}
+
+.luxury-floating-ornament {
+  animation: luxuryFloat 8s ease-in-out infinite;
+}
+
+/* Reveal transition classes with Smooth 1.4s cubic-bezier Fade + Blur */
+.reveal-item {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30px);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity, filter;
+}
+
+.reveal-left {
+  transform: translateX(-40px) translateY(10px);
+}
+
+.reveal-right {
+  transform: translateX(40px) translateY(10px);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(0) scale(1);
+}
+
+/* Glowing CTA continuous liquid pulse & ignition hover */
+@keyframes liquidPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(224, 169, 109, 0.45), 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(224, 169, 109, 0), 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(224, 169, 109, 0), 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn-glow {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  animation: liquidPulse 2s infinite ease-in-out;
+}
+
+.btn-glow:hover {
+  animation: none !important;
+  transform: translateY(-3px) scale(1.02);
+  background-color: #e0a96d !important;
+  color: #0c0c0e !important;
+  box-shadow: 0 0 35px 8px rgba(224, 169, 109, 0.8), 0 10px 20px rgba(224, 169, 109, 0.3) !important;
+}
+
+.btn-glow-outline {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  animation: liquidPulse 2s infinite ease-in-out;
+}
+
+.btn-glow-outline:hover {
+  animation: none !important;
+  transform: translateY(-3px) scale(1.02);
+  border-color: #e0a96d !important;
+  color: #e0a96d !important;
+  background-color: rgba(224, 169, 109, 0.1) !important;
+  box-shadow: 0 0 30px 6px rgba(224, 169, 109, 0.65) !important;
+}
+
+/* Glassmorphism Testimonial Cards */
+.testimonial-glass-card {
+  background: rgba(20, 20, 22, 0.45) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(224, 169, 109, 0.15) !important;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-glass-card:hover {
+  border-color: rgba(224, 169, 109, 0.45) !important;
+  box-shadow: 0 10px 30px rgba(224, 169, 109, 0.15) !important;
+  transform: translateY(-4px);
+}
+
+/* Pause horizontal marquee on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+/* Subtle Hover Effects for Cards */
+.interactive-card {
+  transition: all 0.5s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px);
+  border-color: #e0a96d;
+  box-shadow: 0 15px 30px rgba(224, 169, 109, 0.08);
+}
+
+/* Modern Portfolio Grid items */
+.portfolio-card:hover {
+  border-color: #e0a96d;
+  transform: translateY(-4px);
+  transition: all 0.4s ease;
+}
+
+/* REAL-WORLD INTERACTIVE FALLING ROSE PETALS BACKGROUND STYLING */
+#petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 15; /* sits beautifully over overlay but click-through */
+  overflow: hidden;
+}
+
+.petal-parent {
+  position: absolute;
+  top: -30px;
+  will-change: transform;
+  animation-name: petalFall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.petal-child {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  animation-name: petalSway;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Beautiful organic leaf & petal shapes using CSS border-radius and rose gradients */
+.rose-petal-type-1 {
+  background: linear-gradient(135deg, #e63946 0%, #b31b1b 60%, #800f14 100%);
+  border-radius: 0 100% 40% 100%;
+  box-shadow: inset 1px -1px 3px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.rose-petal-type-2 {
+  background: linear-gradient(135deg, #ff8fa3 0%, #ff4d6d 60%, #c9184a 100%);
+  border-radius: 100% 0 100% 50%;
+  box-shadow: inset 1px -1px 3px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rose-petal-type-3 {
+  background: linear-gradient(135deg, #d90429 0%, #ab041b 70%, #6f0010 100%);
+  border-radius: 0 100% 100% 100%;
+  box-shadow: inset 2px -1px 4px rgba(0, 0, 0, 0.35), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-5vh);
+  }
+  100% {
+    transform: translateY(105vh);
+  }
+}
+
+@keyframes petalSway {
+  0% {
+    transform: rotate(0deg) translateX(0px) rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotate(45deg) translateX(30px) rotateY(120deg) rotateX(60deg);
+  }
+  100% {
+    transform: rotate(90deg) translateX(-30px) rotateY(240deg) rotateX(120deg);
+  }
+}
+
+/* LUXURY INTERACTIVE CAMERA VIEWFINDER FAQ STYLING */
+.viewfinder-card {
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transform-origin: center center;
+}
+
+.viewfinder-card:not(.active-focus) {
+  opacity: 0.45;
+  filter: blur(1.5px);
+  transform: scale(0.985);
+}
+
+.viewfinder-card.active-focus {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: scale(1.015);
+  border-color: rgba(224, 169, 109, 0.7) !important;
+  box-shadow: 0 15px 40px rgba(224, 169, 109, 0.08), inset 0 0 15px rgba(224, 169, 109, 0.03);
+}
+
+.lens-bracket {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease;
+}
+
+.viewfinder-card.active-focus .lens-bracket {
+  transform: rotate(135deg) scale(1.2);
+  color: #e0a96d !important;
+}
+
+/* Smooth Accordion Height Transitions */
+.faq-accordion-body {
+  transition: grid-template-rows 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease, padding-top 0.5s ease;
+}
+
+/* UNIQUE LUXURY VECTOR FLOATING ANIMATION LOOPS */
+@keyframes vectorFloatSlow1 {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, -50px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(360deg);
+  }
+}
+
+@keyframes vectorFloatSlow2 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(1.05) rotate(-90deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes vectorFloatSlow3 {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, 30px) rotate(-180deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(-360deg);
+  }
+}
+
+.bg-vector-floating-1 {
+  animation: vectorFloatSlow1 55s infinite linear;
+}
+
+.bg-vector-floating-2 {
+  animation: vectorFloatSlow2 40s infinite ease-in-out;
+}
+
+.bg-vector-floating-3 {
+  animation: vectorFloatSlow3 65s infinite linear;
+}
+
+

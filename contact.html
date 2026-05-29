@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE INTAKE DESK | VIVAHALUXE CINEMATICS | Bespoke Booking & Consultations Mumbai</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="bg-velvet-black text-white antialiased min-h-screen selection:bg-rose-gold/30 selection:text-rose-gold">
+    <div class="app-frame flex flex-col min-h-screen relative">
+      <!-- Sophisticated Dark glowing core accent line -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#e0a96d] to-transparent opacity-50 z-50"></div>
+
+      <!-- FIXED BLUR NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 px-6 md:px-12 bg-velvet-black/70 backdrop-blur-[20px] border-b border-rose-gold/10">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="./index.html" class="flex flex-col group">
+          <span class="font-serif text-lg md:text-2xl font-bold tracking-[0.18em] text-white group-hover:text-rose-gold transition-colors duration-300">
+            VIVAHALUXE
+          </span>
+          <span class="font-sans text-[8px] md:text-[10px] tracking-[0.4em] text-rose-gold font-semibold uppercase">
+            C I N E M A T I C S
+          </span>
+        </a>
+
+        <!-- Center Menu Links -->
+        <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest font-semibold uppercase">
+          <a href="./index.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">HOME</a>
+          <a href="./portfolio.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">PORTFOLIO</a>
+          <a href="./about.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">THE MASTERS</a>
+          <a href="./contact.html" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">CONTACT</a>
+        </div>
+
+        <!-- Right Side Controls (Mobile Menu Button & CTA Combo) -->
+        <div class="flex items-center gap-4">
+          <!-- Right Action Button -->
+          <div class="hidden md:block">
+            <a href="./contact.html" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+              <span class="relative z-10 flex items-center gap-2">
+                Check Availability
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-ping"></span>
+              </span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle Trigger -->
+          <button id="mobile-menu-btn" class="relative z-50 w-10 h-10 flex md:hidden items-center justify-center text-white hover:text-rose-gold transition-colors duration-300 focus:outline-none bg-white/[0.03] hover:bg-white/[0.08] rounded-full border border-white/[0.08]" aria-label="Toggle Menu">
+            <span class="sr-only">Toggle Menu</span>
+            <div class="relative w-5 h-4 flex flex-col justify-between">
+              <span id="menu-line-1" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+              <span id="menu-line-2" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+              <span id="menu-line-3" class="w-full h-[1.5px] bg-current transition-all duration-300 rounded origin-center"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-velvet-black/98 backdrop-blur-2xl transition-all duration-500 opacity-0 pointer-events-none flex flex-col justify-center items-center px-12 text-center">
+      <!-- Intricate floating mandala wireframe background decoration -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+        <svg class="w-[500px] h-[500px] text-rose-gold animate-spin-slow" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.3" stroke-dasharray="2 2" />
+          <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="0.3" />
+          <path d="M50 5 L50 95 M5 50 L95 50" stroke="currentColor" stroke-width="0.25" />
+          <rect x="35" y="35" width="30" height="30" rx="4" stroke="currentColor" stroke-width="0.3" transform="rotate(45 50 50)" />
+        </svg>
+      </div>
+
+      <!-- Links menu container -->
+      <div class="space-y-10 relative z-10 w-full max-w-sm">
+        <div class="flex flex-col items-center mb-6">
+          <span class="font-serif text-3xl font-bold tracking-[0.25em] text-white">VIVAHALUXE</span>
+          <span class="font-sans text-[9px] tracking-[0.45em] text-rose-gold font-bold uppercase mt-1.5">C I N E M A T I C S</span>
+        </div>
+        
+        <div class="flex flex-col space-y-5 text-sm tracking-[0.25em] font-sans font-semibold uppercase">
+          <a href="./index.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
+          <a href="./portfolio.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
+          <a href="./about.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
+          <a href="./contact.html" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
+        </div>
+
+        <div class="pt-6">
+          <a href="./contact.html" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Book Consultation
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-pulse"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOATING MANDAP AS ENTRY ANCHOR LAYER -->
+    <div class="absolute top-[88px] left-1/2 -translate-x-1/2 z-10 pointer-events-none mb-12">
+      <svg class="w-16 h-16 md:w-20 md:h-20 text-rose-gold/40 luxury-floating-ornament" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.75" />
+        <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1" />
+        <path d="M50 5 L50 95 M5 50 L95 50 M18.5 18.5 L81.5 81.5 M18.5 81.5 L81.5 18.5" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.5" />
+        <rect x="35" y="35" width="30" height="30" rx="4" stroke="currentColor" stroke-width="0.75" transform="rotate(45 50 50)" />
+        <circle cx="50" cy="50" r="5" fill="currentColor" fill-opacity="0.8" />
+        <path d="M50 15 C45 30 35 35 50 50 C65 35 55 30 50 15 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M50 85 C45 70 35 65 50 50 C65 65 55 70 50 85 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M15 50 C30 45 35 35 50 50 C35 65 30 55 15 50 Z" stroke="currentColor" stroke-width="0.75" />
+        <path d="M85 50 C70 45 65 35 50 50 C65 65 70 55 85 50 Z" stroke="currentColor" stroke-width="0.75" />
+      </svg>
+    </div>
+
+    <!-- CONTACT HERO HEADER -->
+    <header class="relative pt-36 pb-12 md:pt-48 md:pb-25 px-6 text-center bg-gradient-to-b from-charcoal-gold via-velvet-black to-velvet-black border-b border-white/[0.03]">
+      <div class="max-w-4xl mx-auto space-y-4 md:space-y-6 z-10">
+        <span class="inline-block px-3 py-1 border border-rose-gold/20 bg-rose-gold/5 rounded-full text-[9px] md:text-xs tracking-[0.3em] uppercase text-rose-gold font-mono">
+          BESPOKE INQUIRY DESK
+        </span>
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white leading-tight">
+          Intake Portal
+        </h1>
+        <p class="max-w-xl mx-auto text-xs md:text-sm text-white/60 font-light leading-relaxed font-sans">
+          Provide your event credentials to align calendar dates and construct structural estimates based on directory presence.
+        </p>
+      </div>
+    </header>
+
+    <!-- CORE INTAKE FORM & WORKSPACE MAP LAYOUT -->
+    <main class="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      
+      <!-- Left side: Detailed Studio Coordinates & Google Maps Routing -->
+      <section class="lg:col-span-5 space-y-8 reveal-item" data-reveal="left">
+        <div class="space-y-4">
+          <span class="font-mono text-xs uppercase tracking-widest text-rose-gold font-semibold">THE HEADQUARTERS</span>
+          <h2 class="font-serif text-2xl md:text-3xl font-medium tracking-tight">The Mumbai Atelier</h2>
+          <p class="text-xs md:text-sm text-white/60 leading-relaxed font-light">
+            We operate our master grading, post-processing arrays, and gallery printing desks inside Mumbai’s premium central core. We gladly receive couples by prior reservation only.
+          </p>
+        </div>
+
+        <!-- Corporate metadata details card -->
+        <div class="p-6 md:p-8 bg-charcoal-gold/40 border border-white/[0.03] rounded-2.5xl space-y-6">
+          <div class="space-y-1">
+            <span class="text-2xs font-mono text-rose-gold uppercase tracking-wider block">CORPORATE RESIDENCY</span>
+            <p class="text-xs md:text-sm text-white/95 leading-relaxed font-sans">
+              <strong>Vivahaluxe Studios, Level 5, The Capital Building, G-Block, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051.</strong>
+            </p>
+          </div>
+
+          <div class="space-y-1 border-t border-white/[0.04] pt-4">
+            <span class="text-2xs font-mono text-rose-gold uppercase tracking-wider block">CONSULT METRICS</span>
+            <p class="text-xs text-white/80 font-mono space-y-1">
+              <span>TEL: +91 22 6902 4450</span> <br>
+              <span>LINE: consultations@vivahaluxe.com</span>
+            </p>
+          </div>
+
+          <!-- Maps Workspace action button -->
+          <div class="pt-2">
+            <button id="initializeMapRouteBtn" class="w-full py-3.5 border border-rose-gold text-rose-gold bg-transparent text-2xs tracking-widest uppercase font-bold rounded-xl hover:bg-rose-gold hover:text-velvet-black transition-all duration-300 block text-center">
+              Initialize Google Maps Route Matrix
+            </button>
+          </div>
+        </div>
+
+        <!-- Additional Note -->
+        <div class="p-5 border-l-2 border-rose-gold/30 bg-rose-gold/5 rounded-r-xl text-2xs text-white/60 leading-relaxed italic">
+          * Note: Due to regional destination traveling rosters, Ranveer Singh Vardhan and Priya Sharma Kapur operate primarily on-site. BKC studio tours require a 48-hour advanced confirmation token.
+        </div>
+      </section>
+
+      <!-- Right side: Bespoke Booking Intake Form -->
+      <section class="lg:col-span-7 bg-[#101013] border border-white/[0.03] rounded-2.5xl p-8 md:p-12 shadow-3xl reveal-item" data-reveal="right" id="consultationPanelOuter">
+        <div id="consultationPanelInner" class="space-y-8">
+          <div class="space-y-2">
+            <h3 class="font-serif text-2xl md:text-3xl text-white font-medium">Legacy Reservation Intake</h3>
+            <p class="text-2xs md:text-xs text-white/40 font-mono uppercase tracking-widest">
+              Please declare your event specifications below
+            </p>
+          </div>
+
+          <form id="bookingForm" class="space-y-6">
+            
+            <!-- Couple Names -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="coupleNames" class="text-2xs font-mono text-rose-gold uppercase tracking-wider block font-bold">Couple Names *</label>
+                <input type="text" id="coupleNames" required placeholder="e.g. Kabir & Mahima" class="w-full px-4 py-3 bg-velvet-black border border-white/10 rounded-xl text-xs tracking-wider text-white focus:outline-none focus:border-rose-gold transition-colors font-sans">
+              </div>
+              
+              <!-- Event Dates -->
+              <div class="space-y-2">
+                <label for="eventDate" class="text-2xs font-mono text-rose-gold uppercase tracking-wider block font-bold">Event Date *</label>
+                <input type="date" id="eventDate" required class="w-full px-4 py-3 bg-velvet-black border border-white/10 rounded-xl text-xs tracking-wider text-white focus:outline-none focus:border-rose-gold transition-colors font-mono">
+              </div>
+            </div>
+
+            <!-- Venue Location & expected guest count -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="venueLocation" class="text-2xs font-mono text-rose-gold uppercase tracking-wider block font-bold">Venue Location & Region *</label>
+                <input type="text" id="venueLocation" required placeholder="e.g. Udaipur City Palace" class="w-full px-4 py-3 bg-velvet-black border border-white/10 rounded-xl text-xs tracking-wider text-white focus:outline-none focus:border-rose-gold transition-colors font-sans">
+              </div>
+              
+              <div class="space-y-2">
+                <label for="guestCount" class="text-2xs font-mono text-rose-gold uppercase tracking-wider block font-bold">Expected Guest Count *</label>
+                <select id="guestCount" required class="w-full px-4 py-3 bg-velvet-black border border-white/10 rounded-xl text-xs tracking-wider text-white/80 focus:outline-none focus:border-rose-gold transition-colors font-mono">
+                  <option value="150" class="bg-velvet-black">Under 150 guests</option>
+                  <option value="350" class="bg-velvet-black">150 - 350 guests</option>
+                  <option value="600" class="bg-velvet-black">350 - 600 guests</option>
+                  <option value="1000" class="bg-velvet-black">600+ guests (Heritage scale)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Estimated Budget (Pricing Slider) -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-2xs font-mono">
+                <span class="text-rose-gold uppercase tracking-wider font-bold">ESTIMATED PRODUCTION BUDGET</span>
+                <span class="text-white font-semibold" id="budgetSliderVal">₹3,50,000+</span>
+              </div>
+              <input type="range" id="estimatedBudget" min="250000" max="1000000" step="50000" value="350000" class="w-full accent-rose-gold h-1 bg-white/10 rounded-lg cursor-pointer">
+              
+              <!-- Quick tool calculations button -->
+              <div class="pt-2 flex items-center justify-between">
+                <button type="button" id="calculateEstimateBtn" class="text-[10px] font-mono tracking-widest text-rose-gold hover:text-white uppercase transition-colors">
+                  [ Calculate Gear & director Alignment ]
+                </button>
+              </div>
+
+              <!-- Output field for dynamic calculations -->
+              <div id="estimationOutput" class="hidden animate-fade-in pt-3">
+                <!-- Javascript will inject analysis block here -->
+              </div>
+            </div>
+
+            <!-- Submit trigger -->
+            <div class="pt-4">
+              <button type="submit" class="btn-glow w-full py-4 bg-rose-gold text-velvet-black text-xs tracking-[0.2em] font-bold uppercase rounded-xl">
+                Submit Consultation Request
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- UNIVERSAL ULTRA-ATTRACTIVE FOOTER -->
+    <footer class="bg-charcoal-gold border-t border-rose-gold/10 pt-20 pb-8 px-6 md:px-12 relative overflow-hidden">
+      <!-- Back Drop Giant Brand Signature -->
+      <div class="absolute -bottom-10 right-0 left-0 hidden lg:block select-none pointer-events-none text-center">
+        <span class="font-serif text-[13.5rem] font-bold text-white/[0.015] tracking-[0.16em] uppercase block leading-none">
+          VIVAHALUXE
+        </span>
+      </div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-16 border-b border-white/[0.04] relative z-10">
+        <!-- Col 1: Studio Signature Block -->
+        <div class="md:col-span-4 space-y-6">
+          <div class="flex flex-col">
+            <span class="font-serif text-xl font-bold tracking-[0.18em] text-white">VIVAHALUXE</span>
+            <span class="font-sans text-[8px] tracking-[0.4em] text-rose-gold font-bold uppercase">C I N E M A T I C S</span>
+          </div>
+          <p class="text-xs md:text-sm text-white/50 leading-relaxed font-light">
+            Luxury wedding photography and high-fashion cinematic portfolios based in Mumbai, capturing heritage unions across Udaipur, Goa, Alibaug, and globe-wide destinations.
+          </p>
+          <!-- Social Badges -->
+          <div class="flex items-center space-x-4 text-white/40 hover:text-rose-gold text-xs font-mono">
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">INSTAGRAM</span>
+            <span class="text-white/20">|</span>
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">VIMEO</span>
+            <span class="text-white/20">|</span>
+            <span class="hover:text-rose-gold transition-colors cursor-pointer">PINTEREST</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Core Directories</h4>
+          <ul class="space-y-2.5 text-xs text-white/50 tracking-wider">
+            <li><a href="./index.html" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
+            <li><a href="./portfolio.html" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
+            <li><a href="./about.html" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
+            <li><a href="./contact.html" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Metrics -->
+        <div class="md:col-span-5 space-y-6">
+          <div class="space-y-4">
+            <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Studio Metrics</h4>
+            <div class="space-y-2 text-xs text-white/60 font-sans leading-relaxed">
+              <p>
+                <strong class="text-rose-gold font-serif">MUMBAI HQ:</strong><br>
+                Vivahaluxe Studios, Level 5, The Capital Building, G-Block, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051.
+              </p>
+              <p>
+                <strong class="text-rose-gold font-serif">EMAIL INTEG:</strong> <br>
+                studios@vivahaluxe.com / consultations@vivahaluxe.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Newsletter Subscription -->
+          <div class="space-y-3">
+            <span class="text-2xs font-mono text-white/40 uppercase tracking-widest block font-bold">JOIN THE INNER CIRCLE</span>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-2">
+              <input type="email" required placeholder="Enter your email" class="flex-1 px-4 py-2 bg-velvet-black border border-white/10 rounded-lg text-xs tracking-wider text-white focus:outline-none focus:border-rose-gold transition-colors">
+              <button type="submit" class="btn-glow px-5 py-2 bg-rose-gold text-velvet-black text-2xs tracking-widest font-bold uppercase rounded-lg">
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal footer lines -->
+      <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row items-center justify-between text-[10px] font-mono text-white/35 gap-4 relative z-10">
+        <div>
+          &copy; 2026 VIVAHALUXE CINEMATICS. ALL REGISTRY RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>DESIGNED FOR VOGUE WEDDINGS</span>
+          <span>|</span>
+          <span>CURATED IN MUMBAI</span>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
