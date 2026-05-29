@@ -4,7 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VIVAHALUXE CINEMATICS | Premium Luxury Wedding Photography & Cinematography Mumbai</title>
-    <!-- Tailwind and custom styles compiled via style.css -->
+    <!-- Tailwind Play CDN for immediate runtime compilation on desktop and GitHub Pages -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'velvet-black': '#0c0c0e',
+              'charcoal-gold': '#131316',
+              'rose-gold': '#e0a96d',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              sans: ['"Montserrat"', 'sans-serif'],
+            },
+            fontSize: {
+              '2xs': '0.65rem',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom vanilla stylesheet -->
     <link rel="stylesheet" href="./style.css">
   </head>
   <body class="bg-velvet-black text-white antialiased min-h-screen selection:bg-rose-gold/30 selection:text-rose-gold">
@@ -16,7 +38,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 px-6 md:px-12 bg-velvet-black/70 backdrop-blur-[20px] border-b border-rose-gold/10">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <!-- Brand Logo -->
-        <a href="./index.html" class="flex flex-col group">
+        <a href="./index" class="flex flex-col group">
           <span class="font-serif text-lg md:text-2xl font-bold tracking-[0.18em] text-white group-hover:text-rose-gold transition-colors duration-300">
             VIVAHALUXE
           </span>
@@ -27,17 +49,17 @@
 
         <!-- Center Menu Links -->
         <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest font-semibold uppercase">
-          <a href="./index.html" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">HOME</a>
-          <a href="./portfolio.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">PORTFOLIO</a>
-          <a href="./about.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">THE MASTERS</a>
-          <a href="./contact.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">CONTACT</a>
+          <a href="./index" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">HOME</a>
+          <a href="./portfolio" class="text-white/70 hover:text-rose-gold transition-colors duration-300">PORTFOLIO</a>
+          <a href="./about" class="text-white/70 hover:text-rose-gold transition-colors duration-300">THE MASTERS</a>
+          <a href="./contact" class="text-white/70 hover:text-rose-gold transition-colors duration-300">CONTACT</a>
         </div>
 
         <!-- Right Side Controls (Mobile Menu Button & CTA Combo) -->
         <div class="flex items-center gap-4">
           <!-- Right Action Button -->
           <div class="hidden md:block">
-            <a href="./contact.html" id="checkAvailabilityBtn" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+            <a href="./contact" id="checkAvailabilityBtn" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
               <span class="relative z-10 flex items-center gap-2">
                 Check Availability
                 <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-ping"></span>
@@ -78,14 +100,14 @@
         </div>
         
         <div class="flex flex-col space-y-5 text-sm tracking-[0.25em] font-sans font-semibold uppercase">
-          <a href="./index.html" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
-          <a href="./portfolio.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
-          <a href="./about.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
-          <a href="./contact.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
+          <a href="./index" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
+          <a href="./portfolio" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
+          <a href="./about" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
+          <a href="./contact" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
         </div>
 
         <div class="pt-6">
-          <a href="./contact.html" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+          <a href="./contact" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
             <span class="relative z-10 flex items-center justify-center gap-2">
               Book Consultation
               <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-pulse"></span>
@@ -116,8 +138,8 @@
     <!-- MAIN HERO / INTRO ENTRY WITH SEMANTIC LOOPING VIDEO BACKGROUND -->
     <header class="relative pt-36 pb-20 md:pt-48 md:pb-32 px-6 flex flex-col items-center justify-center text-center overflow-hidden min-h-[85vh] md:min-h-screen border-b border-white/[0.03]">
       <!-- Semantic Background Video -->
-      <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" autoplay loop muted playsinline>
-        <source src="https://youtu.be/tHckmMuhVAs?si=SM4OJgdaEpurJ-uU" type="video/mp4">
+      <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" autoplay loop muted playsinline poster="https://images.pexels.com/photos/1182963/pexels-photo-1182963.jpeg?auto=format&fit=crop&q=80&w=1200">
+        <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=231da6abfb1e05e507ca12ac8fa996057ab8b64b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
       </video>
       <!-- Dark Overlay with high backdrop-filter blur(4px) as requested -->
       <div class="absolute inset-0 bg-[#0c0c0e]/60 backdrop-blur-[4px] z-10 pointer-events-none"></div>
@@ -140,10 +162,10 @@
 
         <!-- CTA Interactions showing continuous pulse and neon Rose Gold hover glow -->
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 reveal-item">
-          <a href="./portfolio.html" class="btn-glow w-full sm:w-auto px-8 py-4 bg-rose-gold text-velvet-black text-xs tracking-widest font-bold uppercase rounded-full">
+          <a href="./portfolio" class="btn-glow w-full sm:w-auto px-8 py-4 bg-rose-gold text-velvet-black text-xs tracking-widest font-bold uppercase rounded-full">
             EXPLORE THE PORTFOLIOS
           </a>
-          <a href="./contact.html" class="btn-glow-outline w-full sm:w-auto px-8 py-4 border border-white/20 text-white text-xs tracking-widest font-bold uppercase rounded-full">
+          <a href="./contact" class="btn-glow-outline w-full sm:w-auto px-8 py-4 border border-white/20 text-white text-xs tracking-widest font-bold uppercase rounded-full">
             STUDIO CONSULTATION
           </a>
         </div>
@@ -216,6 +238,8 @@
           </div>
 
           <div class="absolute inset-0 bg-gradient-to-t from-velvet-black via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+
+          <!-- Slideshow Text Overlay Removed per User Request -->
           
           <!-- Corner Architectural Framing lines -->
           <div class="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-rose-gold/35 z-25 pointer-events-none"></div>
@@ -228,6 +252,7 @@
             <button id="slideshow-prev" class="p-1.5 border border-white/10 hover:border-rose-gold text-white/80 hover:text-rose-gold rounded-full transition-all focus:outline-none bg-velvet-black/20 hover:bg-velvet-black" aria-label="Previous Slide">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
             </button>
+            <div id="slideshow-dots" class="flex items-center gap-1.5 px-2"></div>
             <button id="slideshow-next" class="p-1.5 border border-white/10 hover:border-rose-gold text-white/80 hover:text-rose-gold rounded-full transition-all focus:outline-none bg-velvet-black/20 hover:bg-velvet-black" aria-label="Next Slide">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -276,7 +301,7 @@
           <p>
             From the quiet morning solitary alignment of the bridal solo to the thunderous rhythmic energy of the sangeet inferno, our presence is deliberate yet inconspicuous. We synchronize with the natural flow, catching immediate human links, raw wet eyes, and beautiful fleeting shadows.
           </p>
-          <a href="./about.html" class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase text-rose-gold hover:text-white transition-colors pt-2">
+          <a href="./about" class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase text-rose-gold hover:text-white transition-colors pt-2">
             Meet the Directors <span class="text-base font-serif">&#10230;</span>
           </a>
         </div>
@@ -414,7 +439,7 @@
             Curated Film Grids
           </h2>
         </div>
-        <a href="./portfolio.html" class="btn-glow-outline px-6 py-3 border border-rose-gold/20 text-rose-gold text-xs tracking-widest uppercase font-bold rounded-full block text-center">
+        <a href="./portfolio" class="btn-glow-outline px-6 py-3 border border-rose-gold/20 text-rose-gold text-xs tracking-widest uppercase font-bold rounded-full block text-center">
           Browse All Chapters
         </a>
       </div>
@@ -649,10 +674,10 @@
           We accept a strictly limited number of luxury destination weddings annually to ensure our master directors manage production, shooting, and grading entirely. Secure your dates today.
         </p>
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="./contact.html" class="btn-glow w-full sm:w-auto px-8 py-3.5 bg-rose-gold text-velvet-black text-xs tracking-widest font-bold uppercase rounded-full">
+          <a href="./contact" class="btn-glow w-full sm:w-auto px-8 py-3.5 bg-rose-gold text-velvet-black text-xs tracking-widest font-bold uppercase rounded-full">
             Initiate Booking Intake
           </a>
-          <a href="./about.html" class="btn-glow-outline w-full sm:w-auto px-8 py-3.5 border border-white/10 text-white text-xs tracking-widest font-bold uppercase rounded-full">
+          <a href="./about" class="btn-glow-outline w-full sm:w-auto px-8 py-3.5 border border-white/10 text-white text-xs tracking-widest font-bold uppercase rounded-full">
             See Director Team
           </a>
         </div>
@@ -692,10 +717,10 @@
         <div class="md:col-span-3 space-y-4">
           <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Core Directories</h4>
           <ul class="space-y-2.5 text-xs text-white/50 tracking-wider">
-            <li><a href="./index.html" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
-            <li><a href="./portfolio.html" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
-            <li><a href="./about.html" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
-            <li><a href="./contact.html" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
+            <li><a href="./index" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
+            <li><a href="./portfolio" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
+            <li><a href="./about" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
+            <li><a href="./contact" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
           </ul>
         </div>
 
@@ -744,6 +769,6 @@
     </div>
 
     <!-- Master animation javascript links -->
-    <script type="module" src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

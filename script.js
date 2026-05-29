@@ -39,8 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
           item.classList.add('reveal-right');
         }
       }
-      observer.observe(item);
+
+      // Safe fallback and stagger for hero / top fold elements
+      const isTopFold = item.closest('header') || item.closest('.hero-section') || index < 3;
+      if (isTopFold) {
+        setTimeout(() => {
+          item.classList.add('revealed');
+        }, 100 + (index * 150)); // Elegant cascading stagger fade-in!
+      } else {
+        observer.observe(item);
+      }
     });
+
+    // Global scroll backup trigger (fires after 2.5 seconds as an absolute fail-safe fallback to guarantee all content is visible)
+    setTimeout(() => {
+      revealItems.forEach(item => {
+        if (!item.classList.contains('revealed')) {
+          item.classList.add('revealed');
+        }
+      });
+    }, 2500);
   };
 
   // 2. STICKY BLURRED NAVBAR SCROLL SENSE
@@ -114,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (budgetInput && budgetDisplay) {
       budgetInput.addEventListener('input', (e) => {
-        const val = parseInt(e.target.value).toLocaleString('en-IN');
+        const val = parseInt(e.target.value, 10).toLocaleString('en-IN');
         budgetDisplay.textContent = `₹${val}+`;
       });
     }
@@ -166,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Budget service estimates
     if (calculateEstimateBtn && estimationOutput) {
       calculateEstimateBtn.addEventListener('click', () => {
-        const guestCount = parseInt(document.getElementById('guestCount')?.value || "150");
-        const budgetCategory = parseInt(budgetInput?.value || "350000");
+        const guestCount = parseInt(document.getElementById('guestCount')?.value || "150", 10);
+        const budgetCategory = parseInt(budgetInput?.value || "350000", 10);
         
         let tiers = "Standard Cinematic Package";
         let directors = "Associate Senior Cinematograph Collective";
@@ -189,15 +207,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
               <div>
                 <span class="text-white/40 block">ARTISTIC GRADE</span>
-                <span class="text-white font-sans text-sm font-semibold">${tiers}</span>
+                <span class="text-white font-sans text-sm font-semibold" id="estTier"></span>
               </div>
               <div>
                 <span class="text-white/40 block">DIRECTOR ALIGNMENT</span>
-                <span class="text-white font-sans text-sm font-semibold">${directors}</span>
+                <span class="text-white font-sans text-sm font-semibold" id="estDirectors"></span>
               </div>
               <div class="md:col-span-2">
                 <span class="text-white/40 block">CAPTURE GEAR COMPLEMENT</span>
-                <span class="text-white font-sans text-sm text-xs">${equipment}</span>
+                <span class="text-white font-sans text-sm text-xs" id="estEquipment"></span>
               </div>
             </div>
             <p class="text-xs text-white/50 italic font-sans">
@@ -205,6 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </p>
           </div>
         `;
+
+        document.getElementById('estTier').textContent = tiers;
+        document.getElementById('estDirectors').textContent = directors;
+        document.getElementById('estEquipment').textContent = equipment;
         estimationOutput.classList.remove('hidden');
       });
     }
@@ -589,6 +611,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // 13. CINEMATIC VIDEO AUTOPLAY ENGINE
+  const initAutoplayVideo = () => {
+    const video = document.querySelector('header video');
+    if (!video) return;
+
+    // Force video playback and capture browser-level autoplay blocks
+    video.play().catch(err => {
+      console.log("Autoplay blocked by browser security. Registering dynamic fallback triggers...");
+      
+      const playOnInteraction = () => {
+        video.play();
+        document.removeEventListener('click', playOnInteraction);
+        document.removeEventListener('touchstart', playOnInteraction);
+        document.removeEventListener('scroll', playOnInteraction);
+      };
+      
+      document.addEventListener('click', playOnInteraction);
+      document.addEventListener('touchstart', playOnInteraction);
+      document.addEventListener('scroll', playOnInteraction);
+    });
+  };
+
+  // 14. LOCAL TESTING PROTOCOL FAIL-SAFE LINK ROUTER
+  const initLocalLinkHandler = () => {
+    // If the site is opened directly as a file:// (e.g. user double-clicking index.html),
+    // rewrite clean links on the fly so they navigate properly locally without a local HTTP server
+    if (window.location.protocol === 'file:') {
+      document.querySelectorAll('a[href^="./"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.endsWith('.html') && href !== './' && !href.includes('#')) {
+          link.setAttribute('href', href + '.html');
+        }
+      });
+    }
+  };
+
   // Initialize all modular items
   initScrollReveal();
   initNavbarScroll();
@@ -602,4 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClassicSlideshow();
   initViewfinderFAQ();
   initMobileMenu();
+  initAutoplayVideo();
+  initLocalLinkHandler();
 });
+

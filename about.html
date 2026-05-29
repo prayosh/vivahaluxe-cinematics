@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THE MASTERS | VIVAHALUXE CINEMATICS | Wedding Filmmaking Directors Mumbai</title>
+    <!-- Tailwind Play CDN for immediate runtime compilation on desktop and GitHub Pages -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'velvet-black': '#0c0c0e',
+              'charcoal-gold': '#131316',
+              'rose-gold': '#e0a96d',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              sans: ['"Montserrat"', 'sans-serif'],
+            },
+            fontSize: {
+              '2xs': '0.65rem',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom vanilla stylesheet -->
     <link rel="stylesheet" href="./style.css">
   </head>
   <body class="bg-velvet-black text-white antialiased min-h-screen selection:bg-rose-gold/30 selection:text-rose-gold">
@@ -15,7 +38,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 px-6 md:px-12 bg-velvet-black/70 backdrop-blur-[20px] border-b border-rose-gold/10">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <!-- Brand Logo -->
-        <a href="./index.html" class="flex flex-col group">
+        <a href="./index" class="flex flex-col group">
           <span class="font-serif text-lg md:text-2xl font-bold tracking-[0.18em] text-white group-hover:text-rose-gold transition-colors duration-300">
             VIVAHALUXE
           </span>
@@ -26,17 +49,17 @@
 
         <!-- Center Menu Links -->
         <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest font-semibold uppercase">
-          <a href="./index.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">HOME</a>
-          <a href="./portfolio.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">PORTFOLIO</a>
-          <a href="./about.html" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">THE MASTERS</a>
-          <a href="./contact.html" class="text-white/70 hover:text-rose-gold transition-colors duration-300">CONTACT</a>
+          <a href="./index" class="text-white/70 hover:text-rose-gold transition-colors duration-300">HOME</a>
+          <a href="./portfolio" class="text-white/70 hover:text-rose-gold transition-colors duration-300">PORTFOLIO</a>
+          <a href="./about" class="text-rose-gold transition-colors duration-300 border-b border-rose-gold pb-1">THE MASTERS</a>
+          <a href="./contact" class="text-white/70 hover:text-rose-gold transition-colors duration-300">CONTACT</a>
         </div>
 
         <!-- Right Side Controls (Mobile Menu Button & CTA Combo) -->
         <div class="flex items-center gap-4">
           <!-- Right Action Button -->
           <div class="hidden md:block">
-            <a href="./contact.html" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+            <a href="./contact" class="btn-glow-outline relative inline-flex items-center justify-center px-4 md:px-6 py-2.5 overflow-hidden font-sans text-xs font-semibold tracking-widest uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
               <span class="relative z-10 flex items-center gap-2">
                 Check Availability
                 <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-ping"></span>
@@ -77,14 +100,14 @@
         </div>
         
         <div class="flex flex-col space-y-5 text-sm tracking-[0.25em] font-sans font-semibold uppercase">
-          <a href="./index.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
-          <a href="./portfolio.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
-          <a href="./about.html" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
-          <a href="./contact.html" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
+          <a href="./index" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">HOME</a>
+          <a href="./portfolio" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">PORTFOLIO</a>
+          <a href="./about" class="mobile-menu-link text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">THE MASTERS</a>
+          <a href="./contact" class="mobile-menu-link text-white/70 hover:text-rose-gold transition-colors duration-300 py-3 border-b border-white/[0.04]">CONTACT</a>
         </div>
 
         <div class="pt-6">
-          <a href="./contact.html" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
+          <a href="./contact" class="relative inline-flex items-center justify-center w-full py-4 overflow-hidden font-sans text-xs font-bold tracking-[0.22em] uppercase border border-rose-gold text-rose-gold bg-transparent rounded-full group">
             <span class="relative z-10 flex items-center justify-center gap-2">
               Book Consultation
               <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-gold animate-pulse"></span>
@@ -313,10 +336,10 @@
         <div class="md:col-span-3 space-y-4">
           <h4 class="font-serif text-sm text-rose-gold tracking-widest font-bold uppercase">Core Directories</h4>
           <ul class="space-y-2.5 text-xs text-white/50 tracking-wider">
-            <li><a href="./index.html" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
-            <li><a href="./portfolio.html" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
-            <li><a href="./about.html" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
-            <li><a href="./contact.html" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
+            <li><a href="./index" class="hover:text-white transition-colors">Home & Master Teaser</a></li>
+            <li><a href="./portfolio" class="hover:text-white transition-colors">Thematic Event Grids</a></li>
+            <li><a href="./about" class="hover:text-white transition-colors">The Directors & Rigs</a></li>
+            <li><a href="./contact" class="hover:text-white transition-colors">Booking Intake Desk</a></li>
           </ul>
         </div>
 
@@ -364,6 +387,7 @@
 
     </div>
 
-    <script type="module" src="./script.js"></script>
+    <!-- Master animation javascript links -->
+    <script src="./script.js"></script>
   </body>
 </html>
